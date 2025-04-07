@@ -9,29 +9,52 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #000;
+      color: #FFD700;
     }
 
-  header {
-  background: linear-gradient(-45deg, #003366, #444, #003366);
-  background-size: 400% 400%;
-  animation: gradientFlow 8s ease infinite;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
+    header {
+      background-image: url('https://via.placeholder.com/1200x300?text=Rakesh+Group+Banner');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFD700;
+    }
 
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      position: relative;
+      z-index: 1;
+      font-size: 2em;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+    }
+
+    .hero {
+      background-color: #111;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
     .section {
       padding: 30px 20px;
       max-width: 1000px;
       margin: auto;
+      background-color: #111;
+      border-top: 1px solid #333;
     }
 
     .services ul {
@@ -39,12 +62,17 @@
       padding-left: 20px;
     }
 
+    .services li {
+      margin-bottom: 10px;
+    }
+
     .images img {
       width: 100%;
       max-width: 400px;
       margin: 10px;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+      filter: brightness(0.85);
     }
 
     .image-gallery {
@@ -54,28 +82,29 @@
     }
 
     .contact {
-      background-color: #f1f1f1;
+      background-color: #222;
       padding: 20px;
       border-radius: 8px;
     }
 
     footer {
-      background-color: #003366;
-      color: white;
+      background-color: #000;
+      color: #FFD700;
       text-align: center;
       padding: 15px 0;
       margin-top: 40px;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1 style="font-size: 2.5em; margin: 0;">Rakesh Group of Companies Private Limited</h1>
-</header>
+  <header>
+    <h1>Rakesh Group of Companies Private Limited</h1>
+  </header>
 
   <section class="section introduction">
-    <h3>Who We Are</h3>
+    <h3>About us</h3>
     <p>
       Rakesh Group of Companies Pvt. Ltd. is a multi-domain enterprise offering exceptional services in legal consultancy
       and premium villa/apartment construction. With a legacy of trust and innovation, we are committed to delivering
@@ -88,7 +117,7 @@
     <h3>Our Services</h3>
     <ul>
       <li>Legal Services</li>
-      <li>Villa and Apartment Constructions</li>
+      <li>Villa and Apartment Construction</li>
     </ul>
   </section>
 
@@ -101,7 +130,7 @@
     </div>
   </section>
 
-<section class="section contact">
+  <section class="section contact">
     <h3>Contact Us</h3>
     <p><strong>Email:</strong> contact@rakeshgroup.in</p>
     <p><strong>Phone:</strong> +91 98765 43210</p>
